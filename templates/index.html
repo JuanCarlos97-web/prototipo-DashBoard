@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+
+<table  class="text-white">
+
+<thead>
+    <tr>
+        <td>Cereal</td>
+        <td>Número de opiniones</td>
+    </tr>
+
+</thead>
+<tbody>
+    {% for dato in datos  %}
+    <tr>
+        <td>{{ dato.0 }}</td>
+        <td>{{ dato.1 }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+
+</table>
+
+
+
+
+<div class="container p-4">
+    
+    <h3  class="text-white">Gráfico de Barras</h3>
+    <img src="{{ chart_image }}" alt="Gráfico de Barras">
+</div>
+
+<div class="container p-4">
+
+    <h3 class="text-white">Gráfico de Barras Horizontal</h3>
+    <img src="{{ charth_image }}" alt="Grafico horizontal">
+
+</div>
+
+
+{% endblock %}
